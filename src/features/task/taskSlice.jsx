@@ -24,8 +24,11 @@ export const taskSlice = createSlice({
         deleteTask: (state, action) => {
             // Filtra las tareas y devuelve un nuevo array sin la tarea que coincide con el ID proporcionado
             return state.filter(task => task.id !== action.payload);
+        },
+        editTask: (state, action) => {
+
         }
     },
 })
-export const { addTask, deleteTask } = taskSlice.actions
+export const { addTask, deleteTask, editTask } = taskSlice.actions
 export default taskSlice.reducer
